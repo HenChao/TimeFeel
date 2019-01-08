@@ -1,0 +1,21 @@
+{
+  "fitbit": {
+    "appUUID": "bb178ebc-d26c-4975-9cf8-f3a1d85391fd",
+    "appType": "app",
+    "appDisplayName": "TimeFeel",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#f44336",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "TimeFeel"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+.background {
+  viewport-fill: black;
+}
+
+#lblClock {
+  x: 50%;
+  y: 32;
+  font-size: 26;
+  text-length: 8;
+  text-anchor: middle;
+  fill: white;
+}

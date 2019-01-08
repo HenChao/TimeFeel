@@ -1,0 +1,16 @@
+<svg>
+  <use id="mixedtext" href="#mixed-text-left-mid" height="100%" fill="fb-yellow">
+    <set href="#header/text" attributeName="text-buffer" to="TimeFeel"/>
+    <set href="#copy/text" attributeName="text-buffer"
+         to="Press the top right button to vibrate for the time."/>
+  </use>
+  
+  <text id="lblClock" />
+  
+  <!-- TOP RIGHT BUTTON -->
+  <use id="btn-tr" href="#combo-button-upper-right" fill="fb-red">
+    <set href="combo-button-icon" attributeName="href" to="play.png"/>
+    <set href="combo-button-icon-press" attributeName="href" to="play_press.png"/>
+    <set href="combo-button-stroke" attributeName="display" to="inline"/>
+  </use>
+</svg>
