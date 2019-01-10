@@ -3,9 +3,37 @@ import { preferences } from "user-settings";
 import { zeroPad, longBuzz, shortBuzz, zeroBuzz, delay } from "../common/utils";
 import document from "document";
 
-
+// Define constants
 clock.granularity = "minutes";
+const vibTimeMS = 700;
+const vibHashMap = {
+  0: 1,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 1,
+  6: 2,
+  7: 3,
+  8: 4,
+  9: 5,
+  10: 2,
+  11: 3,
+  12: 4,
+  13: 5,
+  14: 6,
+  15: 3,
+  16: 4,
+  17: 5,
+  18: 6,
+  19: 7,
+  20: 4,
+  21: 5,
+  22: 6,
+  23: 7
+}; // The number of vibrations for each number
 
+// Set up combo button functionality
 let btnTR = document.getElementById("btn-tr");
 btnTR.onactivate = function(evt) {
   const now = new Date();
@@ -26,10 +54,11 @@ btnTR.onactivate = function(evt) {
     // Vibrate for singles digit of minutes
     setTimeout(function(){
       vibrate(mins % 10);
-    }, 2000);
-  }, 2000);
+    }, (vibHashMap[Math.floor(mins/10)] + 1) * vibTimeMS);
+  }, (vibHashMap[hours] + 1) * vibTimeMS);
 }
 
+// Update the clock display
 clock.ontick = (evt) => {
   const today = evt.date;
   const hours = today.getHours();
@@ -66,12 +95,12 @@ function vibrate(num) {
     } else {
       setTimeout(function(){
         vibrate(num - 5);
-      }, 500);
+      }, vibTimeMS);
     };
   } else {
     shortBuzz();
     setTimeout(function(){
       vibrate(num - 1);
-    }, 500);
+    }, vibTimeMS);
   }
 }
