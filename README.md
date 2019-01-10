@@ -24,7 +24,7 @@ Time | Hours | Minutes tens digit | Minutes single digit
 1:50 | **Single** | *Double* | _**Long**_
 
 # Developer Info
-As this is a hobby project, testing has not been extensively performed for all usecases or any edge conditions. Code also has not been optimized for performance or memory. Timing should be adjusted between pulses for preference.
+As this is a hobby project, testing has not been extensively performed for all usecases or any edge conditions. Code also has not been optimized for performance or memory. Possible future improvements would be to allow users to set timing between each set of pulses.
 
 # Additional Information
 Credits to the FitBit SDK for interfacing with watch functionalities.
